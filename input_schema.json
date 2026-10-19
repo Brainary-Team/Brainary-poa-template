@@ -6,9 +6,8 @@
   "properties": {
     "message": {
       "type": "string",
-      "description": "A message for the example PoA."
+      "description": "Optional message for the example PoA."
     }
   },
-  "required": ["message"],
   "additionalProperties": false
 }

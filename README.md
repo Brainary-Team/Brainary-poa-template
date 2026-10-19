@@ -18,7 +18,8 @@ pnpm package
 ```
 
 `pnpm package` builds `src/main.ts`, validates `manifest.toml`, collects the optional
-`input_schema.json` and `mcp/` files, and writes `dist/my-poa.poa`.
+`input_schema.json` and `mcp/` files, and writes `dist/my-poa.poa`. The starter schema accepts an
+optional `message`; when it is omitted, the example returns its default greeting.
 
 The package manifest uses the current PoA contract:
 
