@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/brainary-poa-template/input.schema.json",
+  "title": "My PoA input",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "A message for the example PoA."
+    }
+  },
+  "required": ["message"],
+  "additionalProperties": false
+}

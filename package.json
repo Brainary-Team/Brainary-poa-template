@@ -1,0 +1,30 @@
+{
+  "name": "brainary-poa-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A TypeScript-first template for building Brainary PoA packages.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "rolldown -c",
+    "package": "pnpm build && node scripts/package.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.3",
+    "smol-toml": "^1.9.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@types/node": "^26.6.5",
+    "rolldown": "^1.2.14",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
