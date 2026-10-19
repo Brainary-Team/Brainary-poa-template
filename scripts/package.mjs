@@ -31,6 +31,25 @@ function requireString(value, field) {
   }
 }
 
+async function validateInputSchema(path) {
+  let schema;
+  try {
+    schema = JSON.parse(await readFile(path, "utf8"));
+  } catch (error) {
+    fail(`input_schema.json must be valid JSON: ${error.message}`);
+  }
+  if (
+    schema === null ||
+    typeof schema !== "object" ||
+    Array.isArray(schema) ||
+    schema.type !== "object"
+  ) {
+    fail(
+      'input_schema.json must declare an object schema with "type": "object"',
+    );
+  }
+}
+
 async function exists(path) {
   try {
     await stat(path);
@@ -95,6 +114,9 @@ if (hasSchema && poa.input_schema !== "input_schema.json") {
 }
 if (!hasSchema && poa.input_schema !== undefined) {
   fail("[poa].input_schema points to a missing input_schema.json");
+}
+if (hasSchema) {
+  await validateInputSchema(schemaPath);
 }
 
 const temporaryPackage = await mkdtemp(join(tmpdir(), "brainary-poa-"));

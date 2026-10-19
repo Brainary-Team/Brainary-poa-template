@@ -43,6 +43,7 @@ memory/               reserved runtime memory adapter directory
 tools/                tool adapters
 mcp/                  optional stdio MCP files shipped in the package
 tests/                Vitest tests
+types/runtime.d.ts    Brainary Runtime API declarations
 scripts/package.mjs   fflate-based .poa packager
 dist/                 generated build and package output
 ```

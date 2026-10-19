@@ -8,4 +8,11 @@ describe("PoA business logic", () => {
       message: "hello",
     });
   });
+
+  it("uses the default message when input is omitted", () => {
+    expect(run()).toEqual({
+      ok: true,
+      message: "Hello from Brainary PoA.",
+    });
+  });
 });
