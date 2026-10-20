@@ -1,3 +1,5 @@
+![Brainary TUI running the PoA template](assets/poa-tui-demo.png)
+
 # Brainary PoA Template
 
 This repository is a TypeScript-first starter for Brainary PoA projects. It also accepts a
